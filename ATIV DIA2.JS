@@ -1,58 +1,67 @@
-// Função para somar dois números
-function somar(numeroA, numeroB) {
-    return numeroA + numeroB;
-  }
-  
-  // Função para subtrair dois números
-  function subtrair(a, b) {
-    return a - b;
-  }
-  
-  // Função para multiplicar dois números
-  function multiplicar(a, b) {
-    return a * b;
-  }
-  
-  // Função para dividir dois números
-  function dividir(a, b) {
-    return a / b;
-  }
-  //função para o cubo de dois numeros
-  
-  function calcularCubo (a, b){
-    return (a+b)(a+b)(a+b);
-  }
-  //funçao para o quadrado que calcula o quadrado do numero
-  function calcularQuadrado (a, b){
-    return (a+b)*(a+b);
-  }
-  
-  //função media para calcular a média dos dois valores
-  function calcularMedia (a, b){
-    return (a+ b) /2;
-  }
-  
-  function calcularMaiorMenor (a , b){
-    if (a > b){
-      return (a /2)* b;
-    }
-  else{
-    return(b /2)* a;
-  }
-  }
-  // Função principal para realizar os cálculos e exibir os resultados na página
-  function calcular() {
-    // Obter os valores dos campos de entrada
-    const numeroA = parseFloat(document.getElementById("numeroA").value);
-    const numeroB = parseFloat(document.getElementById("numeroB").value);
-  
-    // Exibir os resultados na página HTML
-    document.getElementById("soma").innerHTML = "Soma:" + somar(numeroA, numeroB);
-    document.getElementById("subtracao").innerHTML = "Subtração:" + subtrair(numeroA, numeroB);
-    document.getElementById("multiplicacao").innerHTML = "Multiplicação:" + multiplicar(numeroA, numeroB);
-    document.getElementById("divisao").innerHTML = "Divisão:" + dividir(numeroA, numeroB);
-    document.getElementById("calcularCubo").innerHTML="calcularCubo:"+ calcularCubo(numeroA, numeroB);
-    document.getElementById("calcularQuadrado").innerHTML="calcularQuadrado"+ calcularQuadrado(numeroA, numeroB);
-    document.getElementById("calcularMedia").innerHTML="calcularMedia"+ calcularMedia(numeroA, numeroB);
-    document.getElementById("calcularMaiorMenor").innerHTML="calcularMaiorMenor"+ calcularMaiorMenor(numeroA, numeroB);
-  }
+body {
+  background: #888888;
+  font-family: "Open Sans", sans-serif;
+}
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+.login-header, login p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+.login p {
+  padding: 12px;
+}
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.login input[type="submit"]:hover { background: #17c; }
+.login input[type="submit"]:focus { border-color: #05a; }
